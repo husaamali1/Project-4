@@ -1,0 +1,14 @@
+[
+  {
+    "model": "phones.phone",
+    "pk": 2,
+    "fields": {
+      "brand": "samsung galaxy",
+      "model": "S22 ultra",
+      "year": 2023,
+      "price": "500.00",
+      "memory": null,
+      "owner": 1
+    }
+  }
+]

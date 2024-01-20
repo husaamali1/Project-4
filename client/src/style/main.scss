@@ -1,0 +1,166 @@
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  main {
+    flex-grow: 1;
+  }
+}
+
+form.form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  padding: 5px;
+  border-radius: 8px;
+  margin: 8px;
+  width: 250px;
+}
+
+ul {
+  display: flex;
+  justify-content: end;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: grey;
+  height: 90px;
+}
+
+
+
+textarea {
+  width: 250px;
+}
+
+
+a {
+  text-decoration: none;
+  color: darkgrey;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.navbar {
+  background-color: #333;
+  color: #ffffff;
+  padding: 0.75rem 1rem;
+  text-align: center;
+}
+
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0 0.5rem;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #333;
+  color: #ffffff;
+}
+
+span.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0 0.5rem;
+}
+
+img.image {
+  width: 200px; 
+  height: auto; 
+}
+
+
+.holder {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card h4, .card h6, .card p {
+  margin: 0; 
+}
+
+.card h4 {
+  margin-top: 0.5rem;
+}
+
+.card h6, .card p {
+  margin-bottom: 0.5rem;
+}
+
+.card-img {
+  object-fit: cover;
+  height: 200px; 
+}
+
+.card-content-bottom {
+  margin-top: auto; 
+  padding: 1rem; 
+}
+
+.card-img {
+  width: 100%;
+  height: auto; 
+  object-fit: contain; 
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh; 
+}
