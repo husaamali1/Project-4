@@ -35,7 +35,14 @@ I'll walk you through my app planning process. It began with sketching a wirefra
 - User: This table probably contains user information, with fields such as id, name, and email. The id here might be linked to the Phone table if there is a direct relationship, such as users listing phones for sale or registering their purchases.
 
 The relationships between these tables are crucial for the app's functionality. The Phone table is related to the Memory table, which allows the app to display specific memory configurations for each phone. Additionally, the potential link between the Phone and User tables could be used to track which user is associated with each phone listing, enabling features like user profiles, personalised recommendations, or tracking user activity.
-[image upload] [image upload] I will now show you my frontend wireframe making structuring my page straightforward [image upload]
+
+<img src="./assets/backendsketch.png" width="400">
+
+<img src="./assets/relationships.png" width="400">
+
+I will now show you my frontend wireframe making structuring my page straightforward 
+ 
+<img src="./assets/frontendplan.png" width="400">
 
 ## Development Process
 Day 1: Laying the Foundations
@@ -45,42 +52,58 @@ Day 2: Reset and Restart
 Confronted with unresolved backend issues, I made the tough decision to scrap my progress from Day 1 and start fresh. This reset was needed to clear up the complications I couldn't figure out initially.
 
 Day 3: Backend Breakthroughs
-Despite the steep learning curve with Python, given only a week of preparation, I managed to make headway with the backend. Establishing data model relationships was tricky and critical, but I was determined to iron out these foundational issues before moving on. This how i set out my phone model: [image upload]
+Despite the steep learning curve with Python, given only a week of preparation, I managed to make headway with the backend. Establishing data model relationships was tricky and critical, but I was determined to iron out these foundational issues before moving on. This how i set out my phone model:
+
+<img src="./assets/day3.png" width="400">
 
 
 Day 4: Insomnia Testing and Frontend Transition
 After wrapping up the backend, I rigorously tested all the endpoints using Insomnia, confirming they were working perfectly. This success gave me the green light to start on the frontend, where I could apply my recent project experience to make smoother progress.
 
 Day 5: Building and Styling Core Components
-Significant milestones were achieved as I completed the app.jsx, homepage, and single page components. Styling these components as I went along kept the development process organised and visually unified. This how i done my Homepage: [image upload] 
-singlePhone component this how its been set up: [image upload] 
+Significant milestones were achieved as I completed the app.jsx, homepage, and single page components. Styling these components as I went along kept the development process organised and visually unified. This how i done my Homepage: 
+
+<img src="./assets/day5homepage.png" width="400">
+
+singlePhone component this how its been set up: 
+
+<img src="./assets/day5singlepage.png" width="400">
 
 Day 6: Component Expansion and Debugging
-New components were introduced, expanding the project's scope. However, I hit a snag with the displayPhone component due to data type mismatches. Thankfully, with my instructor's help, I resolved this, integrated the registration and login seamlessly, and ended the day with a focus on styling using Bootstrap.
-In this code you can see how i applied bootstrap to style my login page: [image upload]
+New components were introduced, expanding the project's scope. However, I hit a snag with the displayPhone component due to data type mismatches. Thankfully, with my instructor's help, I resolved this, integrated the registration and login seamlessly, and ended the day with a focus on styling using Bootstrap. In this code you can see how i applied bootstrap to style my login page:
+
+<img src="./assets/loginfunction.png" width="400">
 
 Day 7: Profile Page Challenges
 Developing the profile page was tougher than expected. The issue of displaying the active user's name took some debugging, and presenting their listings proved even more challenging. I also had to revisit the backend to fix a URL problem, a reminder of how the backend and frontend must work.
 
 Day 8: Finalising CRUD Operations
-Persistence was key as I tackled the profile page create, update, and delete functionalities. The day was a mixture of frustration and success as I worked through unresponsive buttons and URL issues, but I ended up successfully completing all the CRUD operations, which felt incredibly rewarding. [image upload]
+Persistence was key as I tackled the profile page create, update, and delete functionalities. The day was a mixture of frustration and success as I worked through unresponsive buttons and URL issues, but I ended up successfully completing all the CRUD operations, which felt incredibly rewarding.
+
+<img src="./assets/day8.png" width="400">
 
 Day 9: Testing
-Testing day brought me joy as I found no errors across the site. Implementing the image upload feature, which had been a hurdle in my last project, was a personal victory. I also spruced up the site with new styles and introduced a spinner for loading periods, adding to the user experience. This how it I implemented Upload Images: [image upload]
+Testing day brought me joy as I found no errors across the site. Implementing the image upload feature, which had been a hurdle in my last project, was a personal victory. I also spruced up the site with new styles and introduced a spinner for loading periods, adding to the user experience. This how it I implemented Upload Images: 
+
+<img src="./assets/day9.png" width="400">
 
 Day 10: Documentation and Deployment
 With all project requirements met, I documented ideas for future features and focused on deployment. It was thrilling to prepare the application for launch, marking a significant step in my development journey and the project's lifecycle.
 
 
 ## Key Wins
-[image upload]
+
+<img src="./assets/displayphoneswin.png" width="400">
+
 The code snippet above is one code I'm really proud of. This is a testament to the modular design approach I've taken by using individual components. Mastering Bootstrap has been a highlight, as it's become my go-to tool for quickly and efficiently adding style to the app.
 - Responsive Design: Utilising react-bootstrap, I’ve implemented a responsive layout that adapts to different screen sizes, ensuring a seamless user experience across devices.
 - Efficient Data Handling: Leveraging useLoaderData from react-router-dom, you effectively fetch and display the phone data, demonstrating a solid grasp of data management within React components.
 - Interactive UI Elements: The use of the <Link> component from react-router-dom to wrap around <Card.Img> provides an intuitive and interactive way for users to navigate to the details of each phone, enhancing the overall user interaction.
 - Clean Code Structure: The component's code is well-organised and concise, making it easy to read and understand, which is beneficial for both current and future developers working on the project.
 - Styling Integration: The integration of Bootstrap classes within your React component showcases your ability to blend functionality with aesthetic styling for a polished look.
-[image upload]
+
+<img src="./assets/stylingwin.png" width="400">
+
 I'm really proud of this code snippet as it marks my progress in CSS. Styling was a challenge in my last project, but I've since honed my skills, resulting in this polished and responsive design.
 
 ## Challenges
