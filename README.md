@@ -3,17 +3,27 @@
 Welcome to Tech Mobile, your go-to online mobile phone store. Explore our wide range of phones, complete with clear pictures. Our website's simple design and user-friendly interface make the process of buying or selling phones easy and efficient. Tech Mobile is a community for phone enthusiasts, providing a seamless platform for transactions.
 
 ## Deployment
-Access Infinite Wheels at [https://infinite-wheels-b5e907416190.herokuapp.com/](https://infinite-wheels-b5e907416190.herokuapp.com/).
+Check out Tech Mobile live: [https://tech-mobile-998d3d8214b9.herokuapp.com/](https://tech-mobile-998d3d8214b9.herokuapp.com/)
 
 ## Technologies Used
 - **Frontend:** React
-- **Backend:** JavaScript, with Mongoose for database management, JsonWebToken for security, dotenv for managing environment variables, and React Router Dom for page navigation.
-
+- **Backend:** Python with MongoDB for database management
+- **Additional Tools:** Django REST Framework for the Python Django API, PostgreSQL for the database, and React for the frontend.
+  
 ## Project Duration
-The project was developed from Thursday, December 7th, to Sunday, December 17th, as a solo endeavor.
+This project was independently developed from Thursday, January 11th, to Monday, January 22nd. It was a rewarding experience that provided numerous learning opportunities through problem-solving and the application of various technologies.
 
 ## Brief
-The goal was to create a fully functional application, integrating custom APIs to support CRUD operations (Create, Read, Update, Delete). This required leveraging JavaScript and various packages such as mongoose, jsonwebtoken, dotenv, and React Router Dom.
+In this project my technical requirements was to build a full-stack application by making my own backend and my own front-end
+Use a Python Django API using Django REST Framework to serve your data from a Postgres database
+Consume your API with a separate front-end built with React
+Be a complete product which most likely means multiple relationships and CRUD functionality for at least a couple of models.
+Implement thoughtful user stories/wireframes that are significant enough to help you know which features are core MVP and which you can cut
+Have a visually impressive design to kick your portfolio up a notch and have something to wow future clients & employers. ALLOW time for this.
+Be deployed online so it's publicly accessible.
+A link to my hosted working app in the URL section of your Github repo
+A git repository hosted on Github, with a link to my hosted project, and frequent commits dating back to the very beginning of the project
+
 
 ## Planning and Implementation
 I will now show you how I have planned my backend. I started by drawing a wireframe to help me visualise my files and now I can go ahead and implement everything. It really helped me a lot getting through this project. 
