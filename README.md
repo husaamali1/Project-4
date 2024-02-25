@@ -14,88 +14,90 @@ Check out Tech Mobile live: [https://tech-mobile-998d3d8214b9.herokuapp.com/](ht
 This project was independently developed from Thursday, January 11th, to Monday, January 22nd. It was a rewarding experience that provided numerous learning opportunities through problem-solving and the application of various technologies.
 
 ## Brief
+
 In this project my technical requirements was to build a full-stack application by making my own backend and my own front-end
-Use a Python Django API using Django REST Framework to serve your data from a Postgres database
-Consume your API with a separate front-end built with React
-Be a complete product which most likely means multiple relationships and CRUD functionality for at least a couple of models.
-Implement thoughtful user stories/wireframes that are significant enough to help you know which features are core MVP and which you can cut
-Have a visually impressive design to kick your portfolio up a notch and have something to wow future clients & employers. ALLOW time for this.
-Be deployed online so it's publicly accessible.
-A link to my hosted working app in the URL section of your Github repo
-A git repository hosted on Github, with a link to my hosted project, and frequent commits dating back to the very beginning of the project
+
+The technical requirements were multifaceted:
+- Use a Python Django API using Django REST Framework to serve your data from a Postgres database.
+- Consume your API with a separate front-end built with React.
+- Be a complete product which most likely means multiple relationships and CRUD functionality for at least a couple of models.
+- Implement thoughtful user stories/wireframes that are significant enough to help you know which features are core MVP.
+- Have a visually impressive design to kick your portfolio up a notch and have something to wow future clients & employers. ALLOW time for this.
+- Design the application to be visually impressive, aiming to elevate the portfolio and appeal to future clients and employers.
+- Deploy the application online to make it publicly accessible.
+- Maintain a git repository on GitHub with a link to the hosted project, ensuring frequent commits from the inception of the project.
 
 
 ## Planning and Implementation
-I will now show you how I have planned my backend. I started by drawing a wireframe to help me visualise my files and now I can go ahead and implement everything. It really helped me a lot getting through this project. 
-[image upload]
-After completing my backend, I had already drafted my wireframe for the client side. I was fully prepared to commence the creation process and witness my implementation come to fruition.
-[image upload]
-This is my wireframe for the frontend, making the structuring of my page much more straightforward. 
+I'll walk you through my app planning process. It began with sketching a wireframe using Excalidraw, which helped me visualise the app's layout and determine the essential files needed for the project. Using Quick Database Diagrams, I designed the schema for my application's database, ensuring that I fully understood the relationships between the data.
+- Phone: This is the central table, with attributes like id, brand, model, year, price, and a foreign key memory linking to the Memory table.
+- Memory: This table holds data about the memory options available for the phones, including id, storage, and size. The id in the Memory table is referenced by the memory foreign key in the Phone table.
+- User: This table probably contains user information, with fields such as id, name, and email. The id here might be linked to the Phone table if there is a direct relationship, such as users listing phones for sale or registering their purchases.
 
-My initial page was the homepage where I displayed my list of cars. The "carSingle" path allows users to click on a specific car to view further details. The "portfolio" page requires registration and login for access. On the "carSingle" page, I included options to update and delete the car, although I acknowledge that I need to work on hiding these buttons for users who do not own the car, a priority for future improvements.
-
-The wireframe for my portfolio page involved meticulous planning, encompassing three pages. Initially, I focused on structuring the portfolio page, where users can list their cars. 
-
-Clicking on a listed car leads to another path where users can update or delete their car. The "carSingle" page offers these options only if the user owns the car; otherwise, unauthorised users could cause chaos by modifying or removing other people's listings. To address this, I need to ensure that the buttons are hidden to prevent users from encountering 401 errors indicating unauthorised access.
-[image upload] [image upload]
+The relationships between these tables are crucial for the app's functionality. The Phone table is related to the Memory table, which allows the app to display specific memory configurations for each phone. Additionally, the potential link between the Phone and User tables could be used to track which user is associated with each phone listing, enabling features like user profiles, personalised recommendations, or tracking user activity.
+[image upload] [image upload] I will now show you my frontend wireframe making structuring my page straightforward [image upload]
 
 ## Development Process
-Day 1: Setting Up the Backend
-I started my project by setting up the backend. I created the models for cars and users using MongooseDB and made sure my index.js was configured correctly so my server would work and display my webpage. I also set up .env files for both the frontend and backend to securely manage configuration settings. This how I implemented them: [image upload] [image upload]
+Day 1: Laying the Foundations
+I started off by visualising the structure for a phone shop platform using Excalidraw, mapping out both the backend and frontend. Diving into backend development presented a tough challenge. I found myself struggling with complex code and needing to take frequent breaks.
+
+Day 2: Reset and Restart
+Confronted with unresolved backend issues, I made the tough decision to scrap my progress from Day 1 and start fresh. This reset was needed to clear up the complications I couldn't figure out initially.
+
+Day 3: Backend Breakthroughs
+Despite the steep learning curve with Python, given only a week of preparation, I managed to make headway with the backend. Establishing data model relationships was tricky and critical, but I was determined to iron out these foundational issues before moving on. This how i set out my phone model: [image upload]
 
 
-Day 2: Database Seeding and User Functions
-The next day, I focused on populating my database. I wrote scripts in my seed.js file to add data and delete old entries. Then, I moved on to the controllers folder and worked on the user functions for registration, login, and portfolio management. I made sure all the routes were functioning properly by testing them with Insomnia, correcting any errors I found along the way. This is how i set out my seed.js file: [image upload]
+Day 4: Insomnia Testing and Frontend Transition
+After wrapping up the backend, I rigorously tested all the endpoints using Insomnia, confirming they were working perfectly. This success gave me the green light to start on the frontend, where I could apply my recent project experience to make smoother progress.
 
-This is how i got my Register, Login and Portfolio functions to work: [image upload]
+Day 5: Building and Styling Core Components
+Significant milestones were achieved as I completed the app.jsx, homepage, and single page components. Styling these components as I went along kept the development process organised and visually unified. This how i done my Homepage: [image upload] 
+singlePhone component this how its been set up: [image upload] 
 
+Day 6: Component Expansion and Debugging
+New components were introduced, expanding the project's scope. However, I hit a snag with the displayPhone component due to data type mismatches. Thankfully, with my instructor's help, I resolved this, integrated the registration and login seamlessly, and ended the day with a focus on styling using Bootstrap.
+In this code you can see how i applied bootstrap to style my login page: [image upload]
 
-	
-Day 3: Frontend Infrastructure
-On the third day, I started setting up my frontend by creating a client folder with Vite. This set me up with all the necessary files like src and package.json. I organised my code into components, styles, and utilities folders. I then built and tested critical components such as AllCars, CarCreate, CarSingle, and Nav, as well as an error page for user navigation issues.
+Day 7: Profile Page Challenges
+Developing the profile page was tougher than expected. The issue of displaying the active user's name took some debugging, and presenting their listings proved even more challenging. I also had to revisit the backend to fix a URL problem, a reminder of how the backend and frontend must work.
 
+Day 8: Finalising CRUD Operations
+Persistence was key as I tackled the profile page create, update, and delete functionalities. The day was a mixture of frustration and success as I worked through unresponsive buttons and URL issues, but I ended up successfully completing all the CRUD operations, which felt incredibly rewarding. [image upload]
 
-Day 4: Authentication and Error Handling
-I dedicated this day to debugging and enhancing the user experience, especially on the singleCar page. Most of my time was spent on the registration and login components, ensuring the security and functionality of user authentication.
+Day 9: Testing
+Testing day brought me joy as I found no errors across the site. Implementing the image upload feature, which had been a hurdle in my last project, was a personal victory. I also spruced up the site with new styles and introduced a spinner for loading periods, adding to the user experience. This how it I implemented Upload Images: [image upload]
 
-
-Day 5: Styling and Update Page
-I applied Bootstrap to style my application, focusing first on the navigation and logo. Although I found Bootstrap challenging initially, it became easier as I worked more with it. After styling, I built the update page, which was crucial for users to edit and delete listings. This how i started getting handy with bootstrap and how I used it style and make navbar and logo have a clean look: [image upload]
-
-  
-Day 6: Portfolio Page Challenges
-I tackled the portfolio page, which turned out to be quite the attempt. It was crucial for me to position the update and delete buttons correctly and display each user's listings accurately. By the end of the day, I had fixed all the errors and even managed to link back to the singleCar page for edits. This is how my portfolio ended up at the end: [image upload]
-
-This is how I needed to have my singlePage to look so everything i implemented was in place: [image upload]
-
-Day 7: Final Touches on the Portfolio
-On this day, I fine-tuned the portfolio page's styling and worked out some last-minute changes in the registration feature. After confirming that my application met all the MVP requirements, I introduced a DisplayCars component that optimised the car display process. This code below will show you what will be on my getAllCars page this made it less messy for my getAllCars component which made my code more clean and easier to read: [image upload]
-
-
-
-Day 8: Implementing Active User Features
-I spent the entire day working on active user functionality. It was challenging and took a significant amount of time to resolve, but with my instructor's help, I succeeded. Completing this project on my own, meant to be a group effort, was an incredibly rewarding learning experience. This how it looked like for my active users for them to login and logout: [image upload]
-
-
-
-Day 9: Security and Preparing for Launch
-The final day was dedicated to testing and securing the application's routes.
-I faced persistent issues with the image upload feature and ultimately decided to postpone it to ensure the rest of the application was polished and ready for launch.
+Day 10: Documentation and Deployment
+With all project requirements met, I documented ideas for future features and focused on deployment. It was thrilling to prepare the application for launch, marking a significant step in my development journey and the project's lifecycle.
 
 
 ## Key Wins
 [image upload]
-I was most satisfied with this particular piece of code because I crafted a function where, once you're logged in, the register and login buttons are replaced by logout and portfolio options. Conversely, when you log out, the register and login options reappear. Additionally, I'm quite pleased with my progress in mastering Bootstrap to enhance the aesthetics of my page. While it's not perfect, I'm content with the learning process. Initially, Bootstrap was challenging, but diving into this project has significantly simplified its usage for me.
+The code snippet above is one code I'm really proud of. This is a testament to the modular design approach I've taken by using individual components. Mastering Bootstrap has been a highlight, as it's become my go-to tool for quickly and efficiently adding style to the app.
+- Responsive Design: Utilising react-bootstrap, I’ve implemented a responsive layout that adapts to different screen sizes, ensuring a seamless user experience across devices.
+- Efficient Data Handling: Leveraging useLoaderData from react-router-dom, you effectively fetch and display the phone data, demonstrating a solid grasp of data management within React components.
+- Interactive UI Elements: The use of the <Link> component from react-router-dom to wrap around <Card.Img> provides an intuitive and interactive way for users to navigate to the details of each phone, enhancing the overall user interaction.
+- Clean Code Structure: The component's code is well-organised and concise, making it easy to read and understand, which is beneficial for both current and future developers working on the project.
+- Styling Integration: The integration of Bootstrap classes within your React component showcases your ability to blend functionality with aesthetic styling for a polished look.
+[image upload]
+I'm really proud of this code snippet as it marks my progress in CSS. Styling was a challenge in my last project, but I've since honed my skills, resulting in this polished and responsive design.
 
 ## Challenges
-The most intriguing challenges I encountered involved resolving the 401 and 404 errors. They led me to conduct research and review class recordings to gain a better understanding. Once I grasped the meaning of these errors, I knew where to investigate. I systematically experimented and played around to identify their origins. Another issue was some of my functions getting executed. This taught me the importance of refraining from executing functions that are not actively in use. I learned to proceed methodically, addressing one component at a time to ensure everything operates correctly.
-
+One challenging aspect was fetching and displaying data from the backend on my portfolio page. Initially, it only displayed a user's name, but my vision was to create a more comprehensive portfolio display. Due to time constraints, I had to prioritise functionality, aiming for a working page within the limited time available.
 
 ## Key Learnings
-This project provided an incredible learning experience, and I gained extensive knowledge. Working on it alone allowed me to enhance my problem-solving skills, plan comprehensively, and significantly boosted my confidence in full-stack development. Initially, I had doubts about completing it independently, but I successfully finished the project. While there are several features, such as image implementation, that I would have liked to include but couldn't, it's something I plan to address in the future. I used this project as a means to overcome daily challenges, putting in maximum effort. When faced with difficulties, I made sure to give my best and sought support when needed.
+While building Tech Mobile, I've really gotten to grips with the styling. I've also gotten a better handle on Python and how different features work. Using MongoDB this time around has been smoother than my experience with Mongoose in my previous project, I believe there is still space for me to learn. Plus, the project has taught me patience, especially when I faced a complex issue with the portfolio page that I couldn't fix right away.
 
 ## Current Bugs
-I've identified a bug in my webpage where the edit and delete buttons are not hidden for users who are not the owners. This is the only known bug to my knowledge at the moment.
+- You can update and delete from the homePage if you are the owner of the phone.
+- Single page isn't styled properly.
+- Portfolio page has lots of missing things that will be added soon.
 
 ## Future Improvements
-For future improvements, I aim to enhance my styling further. While there have been improvements compared to my last project, I want to refine it even more. Additionally, I acknowledge the need to improve my time management, as I am dissatisfied that I couldn't incorporate images in a timely manner for this project.
+Looking ahead, we plan to make Tech Mobile even better with updates like
+
+- Fixing my portfolio page making it more interactive for the user where they can see what they own.
+- Moving forward, I plan to dedicate time to refining the styling of the single page view, which I wasn't able to complete due to time constraints.
+- Going forward, I aim to enhance the styling to make the page even more visually appealing and engaging for customers.
+
